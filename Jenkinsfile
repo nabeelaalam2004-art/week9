@@ -6,12 +6,13 @@ pipeline {
                 bat 'docker build -t registration:v1 .'
             }
         }
+
         stage('Push to Docker Hub') {
             steps {
                 bat 'docker tag registration:v1 nabeela04/registration:v1'
                 bat 'docker push nabeela04/registration:v1'
             }
-       
+        }
 
         stage('Deploy to Kubernetes') {
             steps {
