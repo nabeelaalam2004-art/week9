@@ -12,6 +12,7 @@ pipeline {
                 bat 'docker push sriludone/registration:v1'
             }
         }
+
         stage('Deploy to Kubernetes') {
             steps {
                 bat 'kubectl apply -f C:\Users\nabee\Desktop\Devops\Week-2\deployment.yaml'
