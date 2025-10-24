@@ -23,8 +23,6 @@ pipeline {
 
         stage('AutomTated UI Test') {
             steps {
-                echo 'Waiting 30 seconds for Kubernetes service to be ready...'
-                bat 'timeout /t 30' // Wait for 30 seconds (Windows command)
                 echo 'Starting UI test...'
                 bat 'python D:/DevOps/week-2/test_registration.py'
             }
