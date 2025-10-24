@@ -21,10 +21,11 @@ pipeline {
             }
         }
 
-        stage('AutomTated UI Test') {
+        stage('Automated UI Test') {
             steps {
                 echo 'Starting UI test...'
-                bat 'python D:/DevOps/week-2/test_registration.py'
+                // Use forward slashes (works fine in Windows PowerShell)
+                bat 'python C:/Users/nabee/Desktop/Devops/Week-2/test_registration.py'
             }
         }
     }
